@@ -34,18 +34,10 @@ module.exports = {
           600: "#010105",
         },
         primary: {
-          100: "#FFA801",
-          200: "#FAC213",
-          300: "#da9100",
+          100: "#6941C6",
+          200: "#9E7AF4",
         },
-        secondary: {
-          100: "#ffeac3",
-          200: "#ffe1a9",
-          300: "#ffd990",
-          400: "#ffd076",
-        },
-        footer: "#CFF1FF",
-        button: "#05072F",
+        footer: "#9E7AF4",
         background: "#39BFE1",
         grayscale: {
           90: "#464646",

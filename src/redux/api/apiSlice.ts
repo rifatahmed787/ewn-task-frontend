@@ -18,7 +18,8 @@ export const apiSlice = createApi({
   }),
   tagTypes: [
     "user",
-    "github_user"
+    "github_user",
+    "profile"
   ],
 
   endpoints: () => ({}),

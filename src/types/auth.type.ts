@@ -5,10 +5,12 @@ export interface IUser {
     verified?: boolean;
     avatar: string;
     location?: string;
-    languages?: string;
+    language?: string;
     createdAt: string;
     updatedAt: string;
   }
+
+
   
   //auth slice types
   export interface IAuthState {
@@ -22,6 +24,7 @@ export interface IUser {
   // user register types
   export interface IRegister {
     username: string;
+    language:string;
     email: string;
     password: string;
     otp:string;
@@ -75,6 +78,14 @@ export interface IUser {
     avatar: string;
     location:string;
     language:string;
+  }
+
+  export interface UserData {
+    firstName: string;
+    lastName: string;
+    language:string;
+    email: string;
+    password: string;
   }
   
   

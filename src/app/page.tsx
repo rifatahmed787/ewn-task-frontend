@@ -29,19 +29,21 @@ export default function GithuUserList() {
     },
   });
 
+  // the query params
+  const queryParams = userSearch
+    ? { username: triggerSearch && userSearch ? userSearch : "" }
+    : {
+        sort: pagination?.sort,
+        page: pagination?.page,
+        size: pagination?.size,
+      };
+
   const {
     data: users,
     isError,
     isLoading,
     error,
-  } = useGithubUserGetByIdQuery(
-    {
-      sort: pagination?.sort,
-      page: pagination?.page,
-      size: pagination?.size,
-      search: userSearch,
-    }
-  );
+  } = useGithubUserGetByIdQuery(queryParams);
 
   // Update pagination.meta once data is loaded
   useEffect(() => {

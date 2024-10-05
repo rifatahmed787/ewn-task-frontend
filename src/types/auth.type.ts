@@ -9,6 +9,8 @@ export interface IUser {
     createdAt: string;
     updatedAt: string;
   }
+
+
   
   //auth slice types
   export interface IAuthState {

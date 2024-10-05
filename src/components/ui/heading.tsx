@@ -1,16 +1,16 @@
 import { cn } from "@/lib/Utils";
-import React from "react";
+import React, { ReactNode } from "react";
 
 // Define the interface for the props
 interface HeadingProps {
-  Heading: string;
   className?: string;
+  children: ReactNode;
 }
 
-const Heading: React.FC<HeadingProps> = ({ Heading, className }) => {
+const Heading: React.FC<HeadingProps> = ({ className, children }) => {
   return (
-    <h1 className={cn("uppercase text-3xl md:text-4xl font-bold font-primary relative inline-block group", className)}>
-      {Heading}
+    <h1 className={cn("uppercase text-xl md:text-2xl font-bold font-primary relative inline-block group", className)}>
+      {children}
       <span className="heading-underline"></span>
     </h1>
   );

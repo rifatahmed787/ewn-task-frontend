@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-screen fixed z-50 backdrop-blur-sm bg-primary-100 hidden md:block">
-        <div className="px-4 py-4 mx-auto max-w-xl md:max-w-full lg:max-w-screen-xl md:px-5 lg:px-8">
+        <div className="px-4 py-5 mx-auto max-w-xl md:max-w-full lg:max-w-screen-xl md:px-5 lg:px-8">
           <div className="relative flex items-center justify-between">
             <div className="flex items-center">
               <Link href="/" title="Home" className="inline-flex items-center">

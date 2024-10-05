@@ -10,12 +10,12 @@ const PasswordToggler = ({
   return (
     <div style={style} className={`cursor-pointer ${className}`}>
       {isPasswordVisible ? (
-        <BsEyeSlash
+        <BsEye
           onClick={onToggle}
           className="text-gray-500  h-4 w-4 lg:h-6 lg:w-6"
         />
       ) : (
-        <BsEye
+        <BsEyeSlash
           onClick={onToggle}
           className="text-gray-500  h-4 w-4 lg:h-6 lg:w-6"
         />

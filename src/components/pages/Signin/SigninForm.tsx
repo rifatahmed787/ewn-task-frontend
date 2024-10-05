@@ -76,7 +76,7 @@ const SigninForm = () => {
         {/* title */}
         <div className="flex items-center  gap-2 flex-wrap pt-[54px]">
           {ICONS.stack}
-          <Paragraph>Sign up to join with EWN</Paragraph>
+          <Paragraph>Sign in to join with EWN</Paragraph>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>

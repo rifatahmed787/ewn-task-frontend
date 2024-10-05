@@ -77,7 +77,7 @@ const TextInput = ({
       />
       {isPassword && !rightIcon ? (
         <PasswordToggler
-          className="ml-2 absolute top-0 bottom-0 flex items-center right-2"
+          className={`ml-2 absolute top-0 bottom-0 flex items-center right-2 ${errorMessage ? "bottom-8":""}`}
           isPasswordVisible={showPassword}
           onToggle={handleTogglePassword}
         />

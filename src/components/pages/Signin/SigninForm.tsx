@@ -70,7 +70,7 @@ const SigninForm = () => {
 
   return (
     <section
-      className={`min-h-screen w-full  flex items-center justify-center py-[54px]`}
+      className={`min-h-screen w-full  flex items-center justify-center py-10`}
     >
       <div
         className={`relative flex  max-w-[444px] rounded-[16px] w-full  flex-col gap-4 backdrop-blur-3xl bg-white/80 mx-5 px-5 md:px-[62px]

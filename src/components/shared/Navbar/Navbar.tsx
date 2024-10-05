@@ -47,7 +47,7 @@ const Navbar = () => {
   // Handle logout
   const handleLogout = () => {
     dispatch(logout());
-    router.push("/");
+    router.push("/signin");
   };
 
   return (
@@ -105,8 +105,10 @@ const Navbar = () => {
                       />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuContent align="end" className="bg-white">
+                    <Link href={"/profile"}>
+                      <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+                    </Link>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem>Settings</DropdownMenuItem>
                     <DropdownMenuItem>Support</DropdownMenuItem>

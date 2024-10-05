@@ -18,8 +18,10 @@ import { ILoginArgs, UserData } from "@/types/auth.type";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useUserLoginMutation } from "@/Redux/features/auth/authApi";
 import { signInSchema } from "@/components/schema/SigninSchema";
+import { useRouter } from "next/navigation";
 
 const SigninForm = () => {
+  const router = useRouter();
   const {
     control,
     handleSubmit,
@@ -62,8 +64,9 @@ const SigninForm = () => {
       setIsAlertOpen(true);
       setAlertType("success");
       setAlertMessages(loginData?.message ?? "Login successful");
+      router.push("/")
     }
-  }, [error, isError, isSuccess, loginData?.message]);
+  }, [error, isError, isSuccess, loginData?.message, router]);
 
   return (
     <section

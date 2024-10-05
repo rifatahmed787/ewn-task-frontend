@@ -50,7 +50,7 @@ const MobileNav = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    router.push("/");
+    router.push("/signin");
   };
 
   return (
@@ -113,9 +113,11 @@ const MobileNav = () => {
                       <li
                         key={item.id}
                         className={`${
-                          isSelected ? "border-b-[3px] w-10 border-primary-300" : ""
+                          isSelected
+                            ? "border-b-[3px] w-10 border-primary-300"
+                            : ""
                         }`}
-                        onClick={()=>setIsMenuOpen(false)}
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         <Link
                           href={item?.href}
@@ -147,7 +149,9 @@ const MobileNav = () => {
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                          <Link href={"/profile"}>
+                            <DropdownMenuLabel>My Profile</DropdownMenuLabel>
+                          </Link>
                           <DropdownMenuSeparator />
                           <DropdownMenuItem>Settings</DropdownMenuItem>
                           <DropdownMenuItem>Support</DropdownMenuItem>
@@ -170,7 +174,7 @@ const MobileNav = () => {
                                 ? "border-b-[3px] w-10 border-primary-300"
                                 : ""
                             }`}
-                            onClick={()=>setIsMenuOpen(false)}
+                            onClick={() => setIsMenuOpen(false)}
                           >
                             <Link
                               href={item?.href}

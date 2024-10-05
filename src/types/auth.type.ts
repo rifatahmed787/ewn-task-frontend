@@ -5,7 +5,7 @@ export interface IUser {
     verified?: boolean;
     avatar: string;
     location?: string;
-    languages?: string;
+    language?: string;
     createdAt: string;
     updatedAt: string;
   }

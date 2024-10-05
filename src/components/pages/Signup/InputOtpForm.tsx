@@ -1,8 +1,15 @@
 "use client";
 
-
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/otp";
 import ToastContainer from "@/components/ui/toast";
 import ICONS from "@/icons/AllIcons";
@@ -13,10 +20,10 @@ import {
 } from "@/Redux/features/auth/authApi";
 import { UserData } from "@/types/auth.type";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 
 const FormSchema = z.object({
   pin: z.string().min(6, {
@@ -25,7 +32,7 @@ const FormSchema = z.object({
 });
 
 export function InputOTPForm({ userData }: { userData: UserData }) {
- 
+  const router = useRouter();
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [AlertType, setAlertType] = useState<"success" | "error" | "warning">(
     "success"
@@ -60,7 +67,7 @@ export function InputOTPForm({ userData }: { userData: UserData }) {
       await register({
         username: `${userData.firstName} ${userData.lastName}`,
         email: userData.email,
-        language:userData.language,
+        language: userData.language,
         password: userData.password,
         otp: data.pin,
       });
@@ -106,12 +113,14 @@ export function InputOTPForm({ userData }: { userData: UserData }) {
       setIsAlertOpen(true);
       setAlertType("success");
       setAlertMessages(registerData?.message ?? "Registered Successfully");
+      router.push("/");
     }
   }, [
     isRegisterError,
     isRegisterSuccess,
     registerData?.message,
     registerError,
+    router,
   ]);
 
   useEffect(() => {
@@ -126,7 +135,6 @@ export function InputOTPForm({ userData }: { userData: UserData }) {
       setAlertMessages(sendOtpData?.message ?? "Resend OTP Successfully");
     }
   }, [isError, isSuccess, sendOtpData?.message, error]);
-
 
   return (
     <>

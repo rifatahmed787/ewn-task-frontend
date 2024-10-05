@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Trendy-Fashion Frontend
 
-## Getting Started
+### Live Link:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+https://trendy-fashion.vercel.app/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Welcome to the Trendy-Fashion Frontend! This dynamic web application is your gateway to a vibrant fashion platform. Dive into a world of diverse products, where users can effortlessly browse and purchase an array of trendy items. To start exploring and adding items to your cart, users need to create an account by providing their name, email, and password. They can also personalize their profile by adding an optional image URL to truly make their fashion journey their own.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Technologies
 
-## Learn More
+- Next.js(app router)
+- TypeScript
+- TailwindCSS
+- React-Redux
+- Redux-toolkit
+- RTK Query
+- React-hook-form
+- Framer-motion
+- Js-cookie
+- Swiper
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Sign up with ease using your name, email, and password. Optionally, personalize your profile with an image URL.
+- Explore a wide range of fashion products across various categories, from clothing to accessories.
+- Dive into detailed product descriptions, images, pricing, and customer reviews.
+- Efficiently find desired items using search functionality and apply filters based on size, color, style, and more.
+- Share your experiences and insights by leaving reviews and ratings for products you've purchased.
+- Save items you love in a dedicated wishlist for easy access and future purchasing.
+- Enjoy secure and reliable payment processing for a seamless shopping experience.
+- Receive tailored product recommendations based on your browsing and purchase history.
+- Access the platform seamlessly across devices - desktop, tablet, and mobile - for a consistent user experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Alt text](image.png)
